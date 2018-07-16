@@ -40,3 +40,6 @@ const drawingSquare = new CreatSquare(3);
 drawingSquare.draw();
 console.log(drawingSquare);
 console.log(typeof drawingSquare);
+
+console.log(creatCircle.name);
+console.log(CreatSquare.length);
