@@ -46,5 +46,41 @@ console.log(CreatSquare.length);
 
 drawingSquare.location = {z:2}; // Dot notation 
 drawingSquare['location'].a = 3 ; // Bracket notation
-//delete drawingSquare.location.a; // Delete object property
+delete drawingSquare.location.a; // Delete object property
 console.log(drawingSquare);
+
+//Getter and setter
+
+function Createperson(name){
+
+    this.name = name;
+    let age=1
+
+   
+    this.skinColor = function(){
+        console.log('Created person color');
+    }
+
+    Object.defineProperty(this, 'age', {
+        get: function(){
+            return age;
+        },
+        set: function(value){
+            if (value > 1)
+            {
+                console.log('Age is : ' + value);
+            }
+            else{
+                throw new Error('Invalid age');
+
+            }
+        }
+    })
+
+}
+
+const personName = new Createperson('Dilip');
+//console.log(personName.name);
+personName.age = 2;
+
+//console.log(personName.getAge());
